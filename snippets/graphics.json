@@ -1,0 +1,27 @@
+{
+    "camera": {
+        "prefix": "cam",
+        "scope": "pico8p8",
+        "body": [
+            "camera(${1:x},${2:y})"
+        ],
+        "description": "Set camera position"
+    },
+    "circ": {
+        "prefix": "circ",
+        "scope": "pico8p8",
+        "body": [
+            "circ(${1:x},${2:y},${3:radius},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})"
+        ],
+        "description": "Draw a circle"
+    },
+    "circfill": {
+        "prefix": "circf",
+        "scope": "pico8p8",
+        "body": [
+            "circfill(${1:x},${2:y},${3:radius},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})"
+        ],
+        "description": "Draw a filled circle"
+    }
+
+}

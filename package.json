@@ -1,0 +1,137 @@
+{
+    "name": "pico8vscodeeditor",
+    "displayName": "pico8vscodeeditor",
+    "description": "VSCode editor for Pico-8 .p8 files.",
+    "version": "0.0.1",
+    "publisher": "Grumpydev",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:pico8.runCart",
+        "onCommand:pico8.openCart",
+        "onLanguage:pico8p8"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Pico8 VSCode Editor Configuration",
+            "properties": {
+                "pico8vscodeeditor.pico8fullpath": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Full path, including the binary name, to Pico8 (e.g: c:\\pico8\\pico8.exe)"
+                },
+                "pico8vscodeeditor.pico8additionalParameters": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Any additional parameters to pass to Pico8 when opening or runnign carts"
+                }
+            }
+        },
+        "keybindings": [
+            {
+                "command": "pico8.runCart",
+                "key": "ctrl+8 r",
+                "mac": "cmd+8 r",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "pico8.openCart",
+                "key": "ctrl+8 o",
+                "mac": "cmd+8 o",
+                "when": "editorTextFocus"
+            }
+        ],
+        "commands": [
+            {
+                "command": "pico8.runCart",
+                "title": "Run the current pico8 cart",
+                "category": "pico8"
+            },
+            {
+                "command": "pico8.openCart",
+                "title": "Open the current pico8 cart into pico8 in edit mode",
+                "category": "pico8"
+            }
+        ],
+		"languages": [{
+			"id": "pico8p8",
+			"extensions": [ ".p8" ],
+			"aliases": [ "pico8", "p8" ],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "pico8p8",
+			"scopeName": "source.p8",
+			"path": "./syntaxes/lua.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "pico8p8",
+                "path": "./snippets/audio.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/basics.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/cart_data.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/coroutines.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/graphics.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/input.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/map.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/math.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/memory.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/peekpoke.json"
+            },
+            {
+                "language": "pico8p8",
+                "path": "./snippets/pico8.json"
+            }
+        ]
+	},
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "grunt-cli": "^1.2.0"
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "for_loop": {
+        "prefix": "for",
+        "scope": "pico8p8",
+        "body": [
+          "for ${1:variable}=${2:from},${3:to} do",
+          "\t$0",
+          "end"
+        ],
+        "description": "Basic for loop"
+    },
+    "for_step_loop": {
+        "prefix": "fors",
+        "scope": "pico8p8",
+        "body": [
+          "for ${1:variable}=${2:from},${3:to},${4:step} do",
+          "\t$0",
+          "end"
+        ],
+        "description": "For loop with step parameter"
+    },
+    "for_all_loop": {
+        "prefix": "forall",
+        "scope": "pico8p8",
+        "body": [
+          "for ${1:variable} in all(${2:table}) do",
+          "\t$0",
+          "end"
+        ],
+        "description": "For in all loop"
+    },
+    "while_loop": {
+        "prefix": "while",
+        "scope": "pico8p8",
+        "body": [
+          "while (${1:condition}) do",
+          "\t$0",
+          "end"
+        ],
+        "description": "While loop"
+    },
+    "if": {
+        "prefix": "if",
+        "scope": "pico8p8",
+        "body": [
+          "if (${1:condition}) then",
+          "\t$0",
+          "end"
+        ],
+        "description": "Basic if"
+    },
+    "iif": {
+        "prefix": "iif",
+        "scope": "pico8p8",
+        "body": [
+          "if (${1:condition}) $0"
+        ],
+        "description": "Inline if"
+    },
+    "ifel": {
+        "prefix": "ifel",
+        "scope": "pico8p8",
+        "body": [
+          "if (${1:condition}) then",
+          "\t$0",
+          "else",
+          "\t",
+          "end"
+        ],
+        "description": "If else"
+    },
+    "function": {
+        "body": [
+            "function ${1:function_name}(${2:params})",
+            "\t$0",
+            "end"
+        ],
+        "description": "function",
+        "prefix": "fun"
+    }
+}

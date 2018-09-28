@@ -1,0 +1,41 @@
+{
+    "pheader": {
+        "prefix": "pheader",
+        "scope": "pico8p8",
+        "body": [
+            "pico-8 cartridge // http://www.pico-8.com",
+            "version 16",
+            "__lua__",
+            "$0"
+        ],
+        "description": "Pico8 cartridge header"
+    },
+    "pgame": {
+        "prefix": "game",
+        "scope": "pico8p8",
+        "body": [
+          "function _init()",
+          "\t$0",
+          "end",
+          "",
+          "function _update60()",
+          "\t",
+          "end",
+          "",
+          "function _draw()",
+          "\t",
+          "end"
+        ],
+        "description": "Basic pico8 game skeleton"
+    },
+    "consts": {
+        "prefix": "pconsts",
+        "scope": "pico8p8",
+        "body": [
+            "left,right,up,down,fire1,fire2=0,1,2,3,4,5",
+            "black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+            "$0"
+        ],
+        "description": "Basic pico8 constants"
+    }
+}
