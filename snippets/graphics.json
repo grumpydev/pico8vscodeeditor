@@ -1,5 +1,5 @@
 {
-    "camera": {
+    "graphics.camera": {
         "prefix": "cam",
         "scope": "pico8p8",
         "body": [
@@ -7,7 +7,7 @@
         ],
         "description": "Set camera position"
     },
-    "circ": {
+    "graphics.circ": {
         "prefix": "circ",
         "scope": "pico8p8",
         "body": [
@@ -15,7 +15,7 @@
         ],
         "description": "Draw a circle"
     },
-    "circfill": {
+    "graphics.circfill": {
         "prefix": "circf",
         "scope": "pico8p8",
         "body": [

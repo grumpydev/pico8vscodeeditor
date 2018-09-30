@@ -1,3 +1,29 @@
 {
-
+    "cartdata.cartdata": {
+        "prefix": "cartdata",
+        "scope": "pico8p8",
+        "body": [
+          "cartdata(${1:cart_name})",
+          "$0"
+        ],
+        "description": "Open cart data (once per exection)"
+    },
+    "cartdata.dget": {
+        "prefix": "dget",
+        "scope": "pico8p8",
+        "body": [
+          "dget(${1:index})",
+          "$0"
+        ],
+        "description": "Get number stored at index (call cartdata first)"
+    },
+    "cartdata.dset": {
+        "prefix": "dset",
+        "scope": "pico8p8",
+        "body": [
+          "dset(${1:index}, ${2:value})",
+          "$0"
+        ],
+        "description": "Store value at index (call cartdata first)"
+    }
 }

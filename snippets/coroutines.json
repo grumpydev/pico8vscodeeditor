@@ -1,3 +1,38 @@
 {
-
+    "coroutines.cocreate": {
+        "prefix": "cocreate",
+        "scope": "pico8p8",
+        "body": [
+          "cocreate(${1:function})",
+          "$0"
+        ],
+        "description": "Create a coroutine that executes the function"
+    },
+    "coroutines.coresume": {
+        "prefix": "coresume",
+        "scope": "pico8p8",
+        "body": [
+          "coresume(${1:coroutine}${2:,additional_initial_parameters})",
+          "$0"
+        ],
+        "description": "Resume a created coroutine, passing optional additional parameters in first time."
+    },
+    "coroutines.costatus": {
+        "prefix": "costatus",
+        "scope": "pico8p8",
+        "body": [
+          "costatus(${1:coroutine})",
+          "$0"
+        ],
+        "description": "Get the status of a coroutine, either 'running', 'suspended', or 'dead'."
+    },
+    "coroutines.yield": {
+        "prefix": "yield",
+        "scope": "pico8p8",
+        "body": [
+          "yield()",
+          "$0"
+        ],
+        "description": "Pause execution from within a coroutine."
+    }
 }
