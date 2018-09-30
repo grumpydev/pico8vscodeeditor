@@ -1,14 +1,21 @@
 {
     "name": "pico8vscodeeditor",
     "displayName": "pico8vscodeeditor",
-    "description": "VSCode editor for Pico-8 .p8 files.",
+    "description": "VSCode editor for Pico-8 .p8 files with basic lua and pico8 api snippets.",
     "version": "0.0.1",
+    "author": {
+        "name": "Grumpydev",
+        "url": "https://github.com/grumpydev/"
+    },
     "publisher": "Grumpydev",
     "engines": {
         "vscode": "^1.27.0"
     },
     "categories": [
-        "Other"
+        "Snippets","Other"
+    ],
+    "keywords": [
+        "pico8"
     ],
     "activationEvents": [
         "onCommand:pico8.runCart",
