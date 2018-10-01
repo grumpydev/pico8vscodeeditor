@@ -29,6 +29,16 @@
         ],
         "description": "For in all loop"
     },
+    "for_pairs_loop": {
+        "prefix": "forpair",
+        "scope": "pico8p8",
+        "body": [
+          "for ${1:key},${2:value} in pairs(${3:table}) do",
+          "\t$0",
+          "end"
+        ],
+        "description": "For in all pairs loop"
+    },
     "while_loop": {
         "prefix": "while",
         "scope": "pico8p8",

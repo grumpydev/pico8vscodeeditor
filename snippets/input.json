@@ -3,7 +3,7 @@
         "prefix": "btn",
         "scope": "pico8p8",
         "body": [
-          "btn(${1|left,right,up,down,fire1,fire2|},${2|1,2|})",
+          "btn(${1|left,right,up,down,fire1,fire2|}${2,optional_player_number})",
           "$0"
         ],
         "description": "Get button state for given player (see pconsts for constants)"
@@ -12,7 +12,7 @@
         "prefix": "btnp",
         "scope": "pico8p8",
         "body": [
-          "btnp(${1|left,right,up,down,fire1,fire2|},${2|1,2|})",
+          "btnp(${1|left,right,up,down,fire1,fire2|}${2,optional_player_number})",
           "$0"
         ],
         "description": "Get 'repeating' button state for given player (see pconsts for constants)"

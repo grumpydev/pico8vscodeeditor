@@ -28,6 +28,24 @@
         ],
         "description": "Basic pico8 game skeleton"
     },
+    "pgame30": {
+        "prefix": "game30",
+        "scope": "pico8p8",
+        "body": [
+          "function _init()",
+          "\t$0",
+          "end",
+          "",
+          "function _update()",
+          "\t",
+          "end",
+          "",
+          "function _draw()",
+          "\t",
+          "end"
+        ],
+        "description": "Basic 30fps pico8 game skeleton"
+    },
     "consts": {
         "prefix": "pconsts",
         "scope": "pico8p8",

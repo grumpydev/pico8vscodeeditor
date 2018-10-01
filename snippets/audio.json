@@ -1,38 +1,20 @@
 {
-    "audio.musicsimple": {
+    "audio.music": {
         "prefix": "music",
         "scope": "pico8p8",
         "body": [
-          "music(${1:pattern})",
+          "music(${1:pattern}${2:,optional_fade_ms}${3:,optional_channel_mask})",
           "$0"
         ],
-        "description": "Simple Play music (-1 = stop)"
+        "description": "Play music (-1 = stop)"
     },
-    "audio.music": {
-        "prefix": "musicf",
-        "scope": "pico8p8",
-        "body": [
-          "music(${1:pattern},${2:fade_ms},${3:channel_mask})",
-          "$0"
-        ],
-        "description": "Full Play music (-1 = stop)"
-    },
-    "audio.sfxsimple": {
+    "audio.sfx": {
         "prefix": "sfx",
         "scope": "pico8p8",
         "body": [
-          "sfx(${1:sfx_number})",
+          "sfx(${1:sfx_number}${2:,optional_channel}${3:,optional_offset})",
           "$0"
         ],
-        "description": "Simple play sfx"
-    },
-    "audio.sfx": {
-        "prefix": "sfxf",
-        "scope": "pico8p8",
-        "body": [
-          "sfx(${1:sfx_number},${2:channel},${3:offset})",
-          "$0"
-        ],
-        "description": "Full play sfx"
+        "description": "Play sfx"
     }
 }

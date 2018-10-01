@@ -1,3 +1,48 @@
 {
-
+    "memory.cstore": {
+        "prefix": "cstore",
+        "body": [
+            "cstore(${1:dest_address},${2:src_address},${3:length}${4:,optional_filename})",
+            "$0"
+        ],
+        "description": "Copy bytes from ram to filename"
+    },
+    "memory.memcpy": {
+        "prefix": "memcpy",
+        "body": [
+            "memcpy(${1:dest_address},${2:source_address},${3:length})",
+            "$0"
+        ],
+        "description": "Copy memory"
+    },
+    "memory.memset": {
+        "prefix": "memset",
+        "body": [
+            "memset(${1:dest_address},${2:value},${3:length})",
+            "$0"
+        ],
+        "description": "Set memory to value from dest_address for length bytes"
+    },
+    "memory.peek": {
+        "prefix": "peek",
+        "body": [
+            "peek(${1:address})"
+        ],
+        "description": "Read byte from RAM"
+    },
+    "memory.poke": {
+        "prefix": "poke",
+        "body": [
+            "poke(${1:address},${1:value})"
+        ],
+        "description": "Write byte to RAM"
+    },
+    "memory.reload": {
+        "prefix": "reload",
+        "body": [
+            "reload(${1:dest_address},${2:src_address},${3:length}${4:,optional_filename})",
+            "$0"
+        ],
+        "description": "Load a section of cartridge into RAM"
+    }
 }

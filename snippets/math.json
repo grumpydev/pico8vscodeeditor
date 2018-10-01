@@ -40,5 +40,103 @@
             "bxor(${1:x},${1:y})"
         ],
         "description": "Bitwise XOR"
+    },
+    "math.flr": {
+        "prefix": "flr",
+        "body": [
+            "flr(${1:x})"
+        ],
+        "description": "Round down"
+    },
+    "math.round": {
+        "prefix": "round",
+        "body": [
+            "flr(${1:x}+0.5)"
+        ],
+        "description": "Round number"
+    },
+    "math.ceil": {
+        "prefix": "ceil",
+        "body": [
+            "ceil(${1:x})"
+        ],
+        "description": "Round up"
+    },
+    "math.min": {
+        "prefix": "min",
+        "body": [
+            "min(${1:x},${2:y})"
+        ],
+        "description": "Returns the lowest of the two values"
+    },
+    "math.max": {
+        "prefix": "max",
+        "body": [
+            "max(${1:x},${2:y})"
+        ],
+        "description": "Returns the highest of the two values"
+    },
+    "math.mid": {
+        "prefix": "mid",
+        "body": [
+            "mid(${1:x},${2:y},${3:z})"
+        ],
+        "description": "Returns the max, min or middle number e.g. x=mid(min_x, x, max_x) will make sure x is between the min and max values."
+    },
+    "math.srand": {
+        "prefix": "srand",
+        "body": [
+            "srand(${1:x})"
+        ],
+        "description": "Set random seed for rnd"
+    },
+    "math.rnd": {
+        "prefix": "rnd",
+        "body": [
+            "rnd(${1:x})"
+        ],
+        "description": "Returns a random number in the range 0-x (remember to round before using for array/sprite indexes!)"
+    },
+    "math.sgn": {
+        "prefix": "sgn",
+        "body": [
+            "sgn(${1:x})"
+        ],
+        "description": "Returns sign of x e.g. -1 or 1"
+    },
+    "math.shl": {
+        "prefix": "shl",
+        "body": [
+            "shl(${1:x},${2:n})"
+        ],
+        "description": "Bitwise shift x left n times"
+    },
+    "math.shr": {
+        "prefix": "shr",
+        "body": [
+            "shr(${1:x},${2:n})"
+        ],
+        "description": "Bitwise shift x right n times"
+    },
+    "math.sin": {
+        "prefix": "sin",
+        "body": [
+            "sin(${1:x})"
+        ],
+        "description": "Sine of x (inverted), returns a value between 0 and 1"
+    },
+    "math.cos": {
+        "prefix": "cos",
+        "body": [
+            "cos(${1:x})"
+        ],
+        "description": "Cosine of x, returns a value between 0 and 1"
+    },
+    "math.sqrt": {
+        "prefix": "sqrt",
+        "body": [
+            "sqrt(${1:x})"
+        ],
+        "description": "Square root of x"
     }
 }

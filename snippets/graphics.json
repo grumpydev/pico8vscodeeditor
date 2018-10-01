@@ -72,10 +72,10 @@
         "description": "Gets the sprite's flag"
     },
     "graphics.fset": {
-        "prefix": "fget",
+        "prefix": "fset",
         "scope": "pico8p8",
         "body": [
-            "fget(${1:sprite_index},${2:optional_flag_index},${3:value})",
+            "fset(${1:sprite_index},${2:optional_flag_index},${3:value})",
             "$0"
         ],
         "description": "Sets the sprite's flag"
@@ -179,41 +179,23 @@
         ],
         "description": "Sets the spritesheet value of the pixel at the given coords"
     },
-    "graphics.sprsimple": {
+    "graphics.spr": {
         "prefix": "spr",
         "scope": "pico8p8",
         "body": [
-            "spr(${1:sprite_number},${2:x},${3:y})",
-            "$0"
-        ],
-        "description": "Simple draw sprite at given coords"
-    },
-    "graphics.sprfull": {
-        "prefix": "sprf",
-        "scope": "pico8p8",
-        "body": [
-            "spr(${1:sprite_number},${2:x},${3:y},${4:width},${5:height},${6:flip_x},${7:flip_y})",
+            "spr(${1:sprite_number},${2:x},${3:y}${4:,optional_width}${5:,optional_height}${6:,optional_flip_x}${7:,optional_flip_y})",
             "$0"
         ],
         "description": "Full draw sprite at given coords with given size and flip flags"
     },
-    "graphics.ssprsimple": {
+    "graphics.sspr": {
         "prefix": "sspr",
         "scope": "pico8p8",
         "body": [
-            "sspr(${1:spritesheet_x},${2:spritesheet_y},${3:spritesheet_width},${4:spritesheet_height},${5:x},${6:y})",
+            "sspr(${1:spritesheet_x},${2:spritesheet_y},${3:spritesheet_width},${4:spritesheet_height},${5:x},${6:y}${7:,optional_width}${8:,optional_height}${9:,optional_flip_x}${10:,optional_flip_y})",
             "$0"
         ],
-        "description": "Simple draw sprite sheet texture at given coords"
-    },
-    "graphics.ssprfull": {
-        "prefix": "ssprf",
-        "scope": "pico8p8",
-        "body": [
-            "sspr(${1:spritesheet_x},${2:spritesheet_y},${3:spritesheet_width},${4:spritesheet_height},${5:x},${6:y},${7:width},${8:height},${9:flip_x},${10:flip_y})",
-            "$0"
-        ],
-        "description": "Simple draw sprite sheet texture at given coords"
+        "description": "Draw sprite sheet texture at given coords"
     },
     "graphics.fillp": {
         "prefix": "fillp",

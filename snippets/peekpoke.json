@@ -1,3 +1,100 @@
 {
-
+    "peekpoke.gpiow": {
+        "prefix": "gpiow",
+        "body": [
+            "poke(0x5f80+${1:pin_index},${2:value})"
+        ],
+        "description": "Write to GPIO"
+    },
+    "peekpoke.gpior": {
+        "prefix": "gpior",
+        "body": [
+            "peek(0x5f80+${1:pin_index})"
+        ],
+        "description": "Read from GPIO"
+    },
+    "peekpoke.memgfx": {
+        "prefix": "memgfx",
+        "body": [
+            "0x0"
+        ],
+        "description": "Base address for graphics (sprite sheet) memory"
+    },
+    "peekpoke.memgfx2": {
+        "prefix": "memgfx2",
+        "body": [
+            "0x1000"
+        ],
+        "description": "Base address for graphics/map shared memory"
+    },
+    "peekpoke.memmap": {
+        "prefix": "memmap",
+        "body": [
+            "0x2000"
+        ],
+        "description": "Base address for map memory"
+    },
+    "peekpoke.memgfxprops": {
+        "prefix": "memgfxprops",
+        "body": [
+            "0x3000"
+        ],
+        "description": "Base address for graphics props memory"
+    },
+    "peekpoke.memsong": {
+        "prefix": "memsong",
+        "body": [
+            "0x3100"
+        ],
+        "description": "Base address for song memory"
+    },
+    "peekpoke.memsfx": {
+        "prefix": "memsfx",
+        "body": [
+            "0x3200"
+        ],
+        "description": "Base address for sfx memory"
+    },
+    "peekpoke.memud": {
+        "prefix": "memud",
+        "body": [
+            "0x4300"
+        ],
+        "description": "Base address for user data memory"
+    },
+    "peekpoke.memcd": {
+        "prefix": "memcd",
+        "body": [
+            "0x5e00"
+        ],
+        "description": "Base address for persistent cart data memory"
+    },
+    "peekpoke.memds": {
+        "prefix": "memds",
+        "body": [
+            "0x5f00"
+        ],
+        "description": "Base address for draw state memory"
+    },
+    "peekpoke.memhs": {
+        "prefix": "memhs",
+        "body": [
+            "0x5f40"
+        ],
+        "description": "Base address for hardware state memory"
+    },
+    "peekpoke.memgpio": {
+        "prefix": "memgpio",
+        "body": [
+            "0x5f80"
+        ],
+        "description": "Base address for gpio pin memory"
+    },
+    "peekpoke.memscr": {
+        "prefix": "memscr",
+        "body": [
+            "0x6000"
+        ],
+        "description": "Base address for screen memory"
+    }
 }
