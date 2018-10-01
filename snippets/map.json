@@ -1,3 +1,29 @@
 {
-
+    "map.map": {
+        "prefix": "map",
+        "scope": "pico8p8",
+        "body": [
+            "map(${1:cell_x},${2:cell_y},${3:screen_x},${5:screen_y},${3:cells_wide},${3:cells_high})",
+            "$0"
+        ],
+        "description": "Draw the selection of map cells at the given screen position"
+    },
+    "map.mget": {
+        "prefix": "mget",
+        "scope": "pico8p8",
+        "body": [
+            "mget(${1:cell_x},${2:cell_y})",
+            "$0"
+        ],
+        "description": "Gets the map value of the given cell"
+    },
+    "map.mset": {
+        "prefix": "mset",
+        "scope": "pico8p8",
+        "body": [
+            "mset(${1:cell_x},${2:cell_y},${3:value})",
+            "$0"
+        ],
+        "description": "Sets the map value of the given cell"
+    }
 }

@@ -1,3 +1,44 @@
 {
-
+    "math.abs": {
+        "prefix": "abs",
+        "body": [
+            "abs(${1:value})"
+        ],
+        "description": "Abolute value"
+    },
+    "math.atan2": {
+        "prefix": "atan2",
+        "body": [
+            "atan2(${1:dx},${1:dy})"
+        ],
+        "description": "Converts dx,dy to an angle in the range 0-1"
+    },
+    "math.band": {
+        "prefix": "band",
+        "body": [
+            "band(${1:x},${1:y})"
+        ],
+        "description": "Bitwise AND"
+    },
+    "math.bnot": {
+        "prefix": "bnot",
+        "body": [
+            "bnot(${1:x},${1:y})"
+        ],
+        "description": "Bitwise NOT"
+    },
+    "math.bor": {
+        "prefix": "bor",
+        "body": [
+            "bor(${1:x},${1:y})"
+        ],
+        "description": "Bitwise OR"
+    },
+    "math.bxor": {
+        "prefix": "bxor",
+        "body": [
+            "bxor(${1:x},${1:y})"
+        ],
+        "description": "Bitwise XOR"
+    }
 }
