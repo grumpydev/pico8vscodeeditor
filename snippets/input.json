@@ -1,3 +1,77 @@
 {
-
+    "input.btn": {
+        "prefix": "btn",
+        "scope": "pico8p8",
+        "body": [
+          "btn(${1|left,right,up,down,fire1,fire2|},${2|1,2|})",
+          "$0"
+        ],
+        "description": "Get button state for given player (see pconsts for constants)"
+    },
+    "input.btnp": {
+        "prefix": "btnp",
+        "scope": "pico8p8",
+        "body": [
+          "btnp(${1|left,right,up,down,fire1,fire2|},${2|1,2|})",
+          "$0"
+        ],
+        "description": "Get 'repeating' button state for given player (see pconsts for constants)"
+    },
+    "input.dinput": {
+        "prefix": "dinput",
+        "scope": "pico8p8",
+        "body": [
+            "poke(0x5f2d, 1)",
+            "$0"
+        ],
+        "description": "Enable pico8 devkit input for mouse and keyboard input"
+    },
+    "input.dkeyp": {
+        "prefix": "dkeyp",
+        "scope": "pico8p8",
+        "body": [
+            "stat(30)"
+        ],
+        "description": "(Boolean) True when a key pressed"
+    },
+    "input.dkey": {
+        "prefix": "dkey",
+        "scope": "pico8p8",
+        "body": [
+            "stat(31)"
+        ],
+        "description": "(String) character returned by keyboard"
+    },
+    "input.dmousex": {
+        "prefix": "dmousex",
+        "scope": "pico8p8",
+        "body": [
+            "stat(32)"
+        ],
+        "description": "Mouse X"
+    },
+    "input.dmousey": {
+        "prefix": "dmousey",
+        "scope": "pico8p8",
+        "body": [
+            "stat(33)"
+        ],
+        "description": "Mouse Y"
+    },
+    "input.dmousebtn": {
+        "prefix": "dmousebtn",
+        "scope": "pico8p8",
+        "body": [
+            "stat(34)"
+        ],
+        "description": "Mouse buttons bitfield"
+    },
+    "input.dmousewheel": {
+        "prefix": "dmousewheel",
+        "scope": "pico8p8",
+        "body": [
+            "stat(36)"
+        ],
+        "description": "Mouse wheel event"
+    }
 }
