@@ -2,7 +2,7 @@
     "name": "pico8vscodeeditor",
     "displayName": "pico8vscodeeditor",
     "description": "VSCode editor for Pico-8 .p8 files with basic lua and pico8 api snippets.",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/grumpydev/pico8vscodeeditor"

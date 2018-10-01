@@ -1,65 +1,42 @@
-# pico8vscodeeditor README
+# Pico-8 VSCode Plugin
 
-This is the README for your extension "pico8vscodeeditor". After writing up a brief description, we recommend including the following sections.
+This plugin provides facilities for editing Pico-8 p8 files in VSCode.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Currently the plugin provides the following features:
 
-For example if there is an image subfolder under your extension project workspace:
+* Enables LUA syntax highlighting (based off the latest base LUA language plugin)
+* Basic LUA language snippets for loops etc.
+* Pico-8 API snippets for the (hopefully) whole Pico-8 API
+* Additional Pico-8 helper snippets such as:
+    * Creating new carts
+    * Helpful "enumerations" for input and colours
+    * Memory locations/GPIO
+* Launching Pico-8 to open or run a cartridge from within VSCode
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Wherever Pico-8 has an API where there are a "common" set of parameters, and less used optional ones, the snippet for the optional parameters includes the comma, so they can be quickly deleted if not needed, but you will need to type the comma if you want to use them.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* VSCode
+* Pico-8
+
+:)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* `pico8vscodeeditor.pico8fullpath`: full path, including the executable, for Pico-8
+* `pico8vscodeeditor.pico8additionalParameters`: any additional parameters to pass to Pico-8 when launching
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Documentation needs more info :)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.1.0
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release.
