@@ -3,7 +3,8 @@
         "prefix": "cam",
         "scope": "pico8p8",
         "body": [
-            "camera(${1:x},${2:y})"
+            "camera(${1:x},${2:y})",
+            "$0"
         ],
         "description": "Set camera position"
     },
@@ -11,7 +12,8 @@
         "prefix": "circ",
         "scope": "pico8p8",
         "body": [
-            "circ(${1:x},${2:y},${3:radius},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})"
+            "circ(${1:x},${2:y},${3:radius},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
         ],
         "description": "Draw a circle"
     },
@@ -19,9 +21,207 @@
         "prefix": "circf",
         "scope": "pico8p8",
         "body": [
-            "circfill(${1:x},${2:y},${3:radius},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})"
+            "circfill(${1:x},${2:y},${3:radius},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
         ],
         "description": "Draw a filled circle"
+    },
+    "graphics.clip": {
+        "prefix": "clip",
+        "scope": "pico8p8",
+        "body": [
+            "clip(${1:x},${2:y},${2:w},${2:h})",
+            "$0"
+        ],
+        "description": "Set screen clipping region"
+    },
+    "graphics.cls": {
+        "prefix": "cls",
+        "scope": "pico8p8",
+        "body": [
+            "cls(${1|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Clear the screen with the given colour"
+    },
+    "graphics.color": {
+        "prefix": "color",
+        "scope": "pico8p8",
+        "body": [
+            "color(${1|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Sets the default drawing colour"
+    },
+    "graphics.cursor": {
+        "prefix": "cursor",
+        "scope": "pico8p8",
+        "body": [
+            "cursor(${1:x},${2:y})",
+            "$0"
+        ],
+        "description": "Set the cursor position and carriage return margin"
+    },
+    "graphics.fget": {
+        "prefix": "fget",
+        "scope": "pico8p8",
+        "body": [
+            "fget(${1:sprite_index},${2:optional_flag_index})",
+            "$0"
+        ],
+        "description": "Gets the sprite's flag"
+    },
+    "graphics.fset": {
+        "prefix": "fget",
+        "scope": "pico8p8",
+        "body": [
+            "fget(${1:sprite_index},${2:optional_flag_index},${3:value})",
+            "$0"
+        ],
+        "description": "Sets the sprite's flag"
+    },
+    "graphics.flip": {
+        "prefix": "flip",
+        "scope": "pico8p8",
+        "body": [
+            "flip()",
+            "$0"
+        ],
+        "description": "Flips the screen back buffer"
+    },
+    "graphics.line": {
+        "prefix": "line",
+        "scope": "pico8p8",
+        "body": [
+            "line(${1:x0},${2:y0},${3:x1},${4:y1},${5|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Draw a line"
+    },
+    "graphics.pal": {
+        "prefix": "pal",
+        "scope": "pico8p8",
+        "body": [
+            "pal(${1:c0},${2:c1},${3:palette_0_draw_1_screen})",
+            "$0"
+        ],
+        "description": "Switch colour 0 to colour 1, set palette to 0 for draw palette (sprites etc.), or 1 for screen (fades etc.)"
+    },
+    "graphics.palt": {
+        "prefix": "palt",
+        "scope": "pico8p8",
+        "body": [
+            "palt(${1:col},${2:onoff})",
+            "$0"
+        ],
+        "description": "Sets transparency on given colour to on or off"
+    },
+    "graphics.pget": {
+        "prefix": "pget",
+        "scope": "pico8p8",
+        "body": [
+            "pget(${1:x},${2:y})",
+            "$0"
+        ],
+        "description": "Get the value of the pixel at the given coords"
+    },
+    "graphics.pset": {
+        "prefix": "pset",
+        "scope": "pico8p8",
+        "body": [
+            "pset(${1:x},${2:y},${3|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Sets the value of the pixel at the given coords"
+    },
+    "graphics.print": {
+        "prefix": "print",
+        "scope": "pico8p8",
+        "body": [
+            "print(${1:string},${2:x},${3:y},${4|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Prints the string in the given colour at the given coords"
+    },
+    "graphics.rect": {
+        "prefix": "rect",
+        "scope": "pico8p8",
+        "body": [
+            "rect(${1:x0},${2:y0},${3:x1},${4:y1},${5|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Draws a rectangle outline"
+    },
+    "graphics.rectfill": {
+        "prefix": "rectfill",
+        "scope": "pico8p8",
+        "body": [
+            "rectfill(${1:x0},${2:y0},${3:x1},${4:y1},${5|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Draws a filled rectangle"
+    },
+    "graphics.sget": {
+        "prefix": "sget",
+        "scope": "pico8p8",
+        "body": [
+            "sget(${1:x},${2:y})",
+            "$0"
+        ],
+        "description": "Get the spritesheet value of the pixel at the given coords"
+    },
+    "graphics.sset": {
+        "prefix": "sset",
+        "scope": "pico8p8",
+        "body": [
+            "sset(${1:x},${2:y},${3|black,dark_blue,dark_purple,dark_green,brown,dark_gray,light_gray,white,red,orange,yellow,green,blue,indigo,pink,peach|})",
+            "$0"
+        ],
+        "description": "Sets the spritesheet value of the pixel at the given coords"
+    },
+    "graphics.sprsimple": {
+        "prefix": "spr",
+        "scope": "pico8p8",
+        "body": [
+            "spr(${1:sprite_number},${2:x},${3:y})",
+            "$0"
+        ],
+        "description": "Simple draw sprite at given coords"
+    },
+    "graphics.sprfull": {
+        "prefix": "sprf",
+        "scope": "pico8p8",
+        "body": [
+            "spr(${1:sprite_number},${2:x},${3:y},${4:width},${5:height},${6:flip_x},${7:flip_y})",
+            "$0"
+        ],
+        "description": "Full draw sprite at given coords with given size and flip flags"
+    },
+    "graphics.ssprsimple": {
+        "prefix": "sspr",
+        "scope": "pico8p8",
+        "body": [
+            "sspr(${1:spritesheet_x},${2:spritesheet_y},${3:spritesheet_width},${4:spritesheet_height},${5:x},${6:y})",
+            "$0"
+        ],
+        "description": "Simple draw sprite sheet texture at given coords"
+    },
+    "graphics.ssprfull": {
+        "prefix": "ssprf",
+        "scope": "pico8p8",
+        "body": [
+            "sspr(${1:spritesheet_x},${2:spritesheet_y},${3:spritesheet_width},${4:spritesheet_height},${5:x},${6:y},${7:width},${8:height},${9:flip_x},${10:flip_y})",
+            "$0"
+        ],
+        "description": "Simple draw sprite sheet texture at given coords"
+    },
+    "graphics.fillp": {
+        "prefix": "fillp",
+        "scope": "pico8p8",
+        "body": [
+            "fillp(${1:mask})",
+            "$0"
+        ],
+        "description": "Set fill pattern for circ, circfill, rect, rectfill, pset, and line (see https://seansleblanc.itch.io/pico-8-fillp-tool)"
     }
-
 }
