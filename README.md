@@ -148,6 +148,10 @@ Documentation needs more info :)
 
 ## Release Notes
 
+### 0.2.1
+
+Fixed run and open if file was already saved.
+
 ### 0.2.0
 
 Updated run and open commands to save the current document first.

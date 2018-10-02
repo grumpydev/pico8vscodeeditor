@@ -28,11 +28,6 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         document.save().then(s => {
-            if (!s) {
-                vscode.window.showErrorMessage("Error: unable to save current document.");
-                return;
-            }
-
             // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
             process.exec(`${picoPath} -run ${filename} ${additionalParams}`, (err, stdout, stderr) => {
                 if (stdout && stdout.length > 0) {
@@ -75,11 +70,6 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         document.save().then(s => {
-            if (!s) {
-                vscode.window.showErrorMessage("Error: unable to save current document.");
-                return;
-            }
-
             // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
             process.exec(`${picoPath} ${filename} ${additionalParams}`, (err, stdout, stderr) => {
                 if (stdout && stdout.length > 0) {
