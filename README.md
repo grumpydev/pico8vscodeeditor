@@ -2,6 +2,8 @@
 
 This plugin provides facilities for editing Pico-8 p8 files in VSCode.
 
+![Basic plugin demo](https://github.com/grumpydev/pico8vscodeeditor/blob/master/demo.gif?raw=true)
+
 ## Features
 
 Currently the plugin provides the following features:
