@@ -150,6 +150,10 @@ Documentation needs more info :)
 
 ## Release Notes
 
+### 0.2.2
+
+Updated readme with video demo.
+
 ### 0.2.1
 
 Fixed run and open if file was already saved.
