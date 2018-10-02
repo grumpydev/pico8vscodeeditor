@@ -1,6 +1,7 @@
 'use strict';
 import * as vscode from 'vscode';
 import * as process from 'child_process';
+import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand('pico8.runCart', () => {
@@ -17,18 +18,35 @@ export function activate(context: vscode.ExtensionContext) {
         }
         let additionalParams = config.pico8additionalParameters || "";
 
-        process.exec(`${picoPath} -run ${vscode.window.activeTextEditor.document.fileName} ${additionalParams}`, (err, stdout, stderr) => {
-            if (stdout && stdout.length > 0) {
-                console.log(`pico8 output: ${stdout}`);
+        let document = vscode.window.activeTextEditor.document;
+        let filename = document.fileName;
+        let folder = path.dirname(filename);
+
+        if (!filename || !folder) {
+            vscode.window.showErrorMessage("Error: Current file is not saved, or unable to find parent folder.");
+            return;
+        }
+
+        document.save().then(s => {
+            if (!s) {
+                vscode.window.showErrorMessage("Error: unable to save current document.");
+                return;
             }
-            
-            if (stderr && stderr.length > 0) {
-                console.log(`pico8 error output: ${stderr}`);
-            }
-            
-            if (err) {
-                vscode.window.showErrorMessage(`pico8 error: ${err.name} - ${err.message}`);
-            }
+
+            // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
+            process.exec(`${picoPath} -run ${filename} ${additionalParams}`, (err, stdout, stderr) => {
+                if (stdout && stdout.length > 0) {
+                    console.log(`pico8 output: ${stdout}`);
+                }
+                
+                if (stderr && stderr.length > 0) {
+                    console.log(`pico8 error output: ${stderr}`);
+                }
+                
+                if (err) {
+                    vscode.window.showErrorMessage(`pico8 error: ${err.name} - ${err.message}`);
+                }
+            });
         });
     });
     context.subscriptions.push(disposable);
@@ -47,18 +65,35 @@ export function activate(context: vscode.ExtensionContext) {
         }
         let additionalParams = config.pico8additionalParameters || "";
 
-        process.exec(`${picoPath} ${vscode.window.activeTextEditor.document.fileName} ${additionalParams}`, (err, stdout, stderr) => {
-            if (stdout && stdout.length > 0) {
-                console.log(`pico8 output: ${stdout}`);
+        let document = vscode.window.activeTextEditor.document;
+        let filename = document.fileName;
+        let folder = path.dirname(filename);
+
+        if (!filename || !folder) {
+            vscode.window.showErrorMessage("Error: Current file is not saved, or unable to find parent folder.");
+            return;
+        }
+
+        document.save().then(s => {
+            if (!s) {
+                vscode.window.showErrorMessage("Error: unable to save current document.");
+                return;
             }
-            
-            if (stderr && stderr.length > 0) {
-                console.log(`pico8 error output: ${stderr}`);
-            }
-            
-            if (err) {
-                vscode.window.showErrorMessage(`pico8 error: ${err.name} - ${err.message}`);
-            }
+
+            // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
+            process.exec(`${picoPath} ${filename} ${additionalParams}`, (err, stdout, stderr) => {
+                if (stdout && stdout.length > 0) {
+                    console.log(`pico8 output: ${stdout}`);
+                }
+                
+                if (stderr && stderr.length > 0) {
+                    console.log(`pico8 error output: ${stderr}`);
+                }
+                
+                if (err) {
+                    vscode.window.showErrorMessage(`pico8 error: ${err.name} - ${err.message}`);
+                }
+            });
         });
     });
     context.subscriptions.push(disposable);
