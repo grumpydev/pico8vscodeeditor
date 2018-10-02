@@ -2,7 +2,7 @@
     "name": "pico8vscodeeditor",
     "displayName": "pico8vscodeeditor",
     "description": "VSCode editor for Pico-8 .p8 files with basic lua and pico8 api snippets.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/grumpydev/pico8vscodeeditor"
@@ -18,7 +18,8 @@
         "vscode": "^1.27.0"
     },
     "categories": [
-        "Snippets","Other"
+        "Snippets",
+        "Other"
     ],
     "keywords": [
         "pico8"
@@ -72,17 +73,26 @@
                 "category": "pico8"
             }
         ],
-		"languages": [{
-			"id": "pico8p8",
-			"extensions": [ ".p8" ],
-			"aliases": [ "pico8", "p8" ],
-			"configuration": "./language-configuration.json"
-		}],
-		"grammars": [{
-			"language": "pico8p8",
-			"scopeName": "source.p8",
-			"path": "./syntaxes/lua.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "pico8p8",
+                "extensions": [
+                    ".p8"
+                ],
+                "aliases": [
+                    "pico8",
+                    "p8"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "pico8p8",
+                "scopeName": "source.p8",
+                "path": "./syntaxes/lua.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "pico8p8",
@@ -129,7 +139,7 @@
                 "path": "./snippets/pico8.json"
             }
         ]
-	},
+    },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
