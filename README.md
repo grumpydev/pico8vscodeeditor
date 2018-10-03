@@ -150,6 +150,10 @@ Documentation needs more info :)
 
 ## Release Notes
 
+### 0.2.3
+
+Fixed issue with paths with spaces in when launching pico8
+
 ### 0.2.2
 
 Updated readme with video demo.

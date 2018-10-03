@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "pico8vscodeeditor" extension will be documented in this file.
 
+## 0.2.3
+
+Fixed issue with paths with spaces in when launching pico8
+
 ## 0.2.2
 
 Updated readme with video demo.
