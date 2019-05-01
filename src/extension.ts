@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         document.save().then(s => {
             // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
-            process.exec(`${picoPath} -run "${filename}" ${additionalParams}`, (err, stdout, stderr) => {
+            process.exec(`"${picoPath}" -run "${filename}" ${additionalParams}`, (err, stdout, stderr) => {
                 if (stdout && stdout.length > 0) {
                     console.log(`pico8 output: ${stdout}`);
                 }
@@ -71,7 +71,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         document.save().then(s => {
             // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
-            process.exec(`${picoPath} "${filename}" ${additionalParams}`, (err, stdout, stderr) => {
+            process.exec(`"${picoPath}" "${filename}" ${additionalParams}`, (err, stdout, stderr) => {
                 if (stdout && stdout.length > 0) {
                     console.log(`pico8 output: ${stdout}`);
                 }
