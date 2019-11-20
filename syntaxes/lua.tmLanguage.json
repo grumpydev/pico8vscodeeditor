@@ -86,7 +86,8 @@
                     "name": "string.quoted.single.lua",
                     "patterns": [
                         {
-                            "include": "#escaped_char"
+                            "match": "\\\\.",
+                            "name": "constant.character.escape.lua"
                         }
                     ]
                 },
@@ -106,7 +107,8 @@
                     "name": "string.quoted.double.lua",
                     "patterns": [
                         {
-                            "include": "#escaped_char"
+                            "match": "\\\\.",
+                            "name": "constant.character.escape.lua"
                         }
                     ]
                 },
