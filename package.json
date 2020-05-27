@@ -43,7 +43,7 @@
                 "pico8vscodeeditor.pico8additionalParameters": {
                     "type": "string",
                     "default": null,
-                    "description": "Any additional parameters to pass to Pico8 when opening or runnign carts"
+                    "description": "Any additional parameters to pass to Pico8 when opening or running carts"
                 }
             }
         },
