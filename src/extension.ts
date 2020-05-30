@@ -1,6 +1,7 @@
 'use strict';
 import * as vscode from 'vscode';
 import * as process from 'child_process';
+import * as os from 'os';
 import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -28,8 +29,17 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         document.save().then(s => {
+            let runCommand = `"${picoPath}" -run "${filename}" ${additionalParams}`;
+            if (os.type() === "Darwin") {
+                // Using quotes in runCommand gave error, so we replace
+                // all the spaces with a slash+space
+                picoPath = picoPath.split(' ').join('\\ ');
+                filename = filename.split(' ').join('\\ ');
+                runCommand = `open ${picoPath} --args -run ${filename} ${additionalParams}`;
+            }
+
             // Would be good to set the root path to the folder the file is in, but doesn't seem to be a commandline option?
-            process.exec(`"${picoPath}" -run "${filename}" ${additionalParams}`, (err, stdout, stderr) => {
+            process.exec(runCommand, (err, stdout, stderr) => {
                 if (stdout && stdout.length > 0) {
                     console.log(`pico8 output: ${stdout}`);
                 }
